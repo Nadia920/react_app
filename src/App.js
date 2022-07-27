@@ -1,8 +1,12 @@
-import logo from './logo.svg';
+/*import logo from './logo.svg';*/
 /*import './App.css';*/
 import React from 'react'
-import {BrowserRouter, Router, Switch} from 'react-router-dom'
+/*import {BrowserRouter, Routes, Route} from 'react-router-dom'*/
+import {Route, Routes, BrowserRouter} from 'react-router-dom';
 import {Home} from './pages/Home'
+import {About} from "./pages/About";
+import {Navbar} from "./components/Navbar";
+
 function App() {
   return (
       /*<div className="App">
@@ -22,11 +26,12 @@ function App() {
       </header>
     </div>*/
       <BrowserRouter>
+          <Navbar />
       <div className="container pt-4">
-      <Switch>
-        <Router path={'/'} exact component={Home} />
-          <Router path={'/'} exact component={Home} />
-      </Switch>
+      <Routes>
+        <Route path={'/'} element={<Home />} />
+          <Route path={'/about'} element={<About />} />
+      </Routes>
       </div>
       </BrowserRouter>
   );
