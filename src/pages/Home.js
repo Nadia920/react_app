@@ -8,6 +8,7 @@ export const Home = () => {
 
     useEffect( () => {
        fetchNotes()
+           //eslint-disable-next-line
     }, [])
     return (
         <Fragment>
