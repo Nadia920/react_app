@@ -12,7 +12,7 @@ export const Navbar = () => (
         <NavLink
           className="nav-link"
           to="/"
-          exact
+          exact="true"
         >
           Главная
         </NavLink>
